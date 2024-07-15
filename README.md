@@ -18,40 +18,6 @@ To use LinqFramer in your project, clone the repository and include the `LinqFra
 git clone https://github.com/JacksonMeade/LinqFramer.git
 ```
 
-## Usage
-
-Below is an example of how to use LinqFramer to create and manipulate a data frame.
-
-```csharp
-using LinqFramer;
-using System;
-using System.Collections.Generic;
-
-class Program
-{
-    static void Main()
-    {
-        var rows = new List<KeyValuePair<string, IEnumerable<KeyValuePair<string, object?>>>>
-        {
-            new KeyValuePair<string, IEnumerable<KeyValuePair<string, object?>>>("Row1", new List<KeyValuePair<string, object?>>
-            {
-                new KeyValuePair<string, object?>("Col1", 1),
-                new KeyValuePair<string, object?>("Col2", 2)
-            }),
-            new KeyValuePair<string, IEnumerable<KeyValuePair<string, object?>>>("Row2", new List<KeyValuePair<string, object?>>
-            {
-                new KeyValuePair<string, object?>("Col1", 3),
-                new KeyValuePair<string, object?>("Col2", 4)
-            })
-        };
-
-        var frame = Frame<string, string>.FromRows(rows);
-
-        Console.WriteLine(frame);
-    }
-}
-```
-
 ## API Reference
 
 ### Frame Class
